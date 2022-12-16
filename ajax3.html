@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX 3 - external API</title>
+    <style>
+        .user{
+            display:flex;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .user ul{
+            list-style:none;
+        }
+    </style>
 </head>
 <body>
     
@@ -31,9 +42,9 @@
                     for (let i in users){
                         output +=
                         '<div class="user">' +
-                        '<h3>'+users[i].login+'</h3>' +
                         '<img src="'+users[i].avatar_url+'" width="70" height="70">' +
                         '<ul>' +
+                        '<li>Name: '+users[i].login+'</li>' +
                         '<li>ID: ' +users[i].id+ '</li>' +
                         '<li>admin: ' +users[i].site_admin+ '</li>' +
                         '</ul>' +
