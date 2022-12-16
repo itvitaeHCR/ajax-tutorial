@@ -48,17 +48,25 @@
 
             // OPTIONAL - for loaders
             xhr.onprogress = function(){
-                console.log('READYSTATE: ', xhr.readyState)
+                console.log('READYSTATE: ', xhr.readyState);
                 // insert loading animation here
             }
 
             xhr.onerror = function () {
-                console.log('request error')
+                console.log('request error');
             }
 
             //sends request
             xhr.send();
         }
+
+        // ALLTERNATIVE
+        // xhr.onreadystatechange() = function() {
+        //     console.log('READYSTATE: ', xhr.readyState);
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         console.log(this.responseText);
+        //     }
+        // }
 
 
     </script>
